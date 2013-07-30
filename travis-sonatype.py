@@ -6,7 +6,7 @@ import xml.dom.minidom
 
 homedir = os.path.expanduser("~")
 sonatypeSettings = "/.m2/sonatype.xml"
-m2 = xml.dom.minidom.parse(homedir + sonatypeSettings)
+m2 = xml.dom.minidom.parse(homedir + "/.m2/settings.xml")
 
 if os.environ["TRAVIS_SECURE_ENV_VARS"] != "false":
   settings = m2.getElementsByTagName("settings")[0]
