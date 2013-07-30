@@ -17,5 +17,5 @@ else:
 
 command = "mvn " + " ".join(options + goals)
 
-print command
+print "$" + command
 sys.exit(subprocess.call(command, shell = True))
