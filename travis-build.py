@@ -5,10 +5,9 @@ import sys
 import yaml
 
 jdks = {
-    "oraclejdk8": "java-8-oracle",
-    "oraclejdk7": "java-7-oracle",
-    "openjdk7":   "java-7-openjdk",
-    "openjdk6":   "java-6-openjdk"
+    "openjdk8":  "java-1.8.0-openjdk",
+    "openjdk10": "openjdk10",
+    "openjdk11": "openjdk11"
 }
 
 options = sys.argv[1::]
