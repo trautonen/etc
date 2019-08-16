@@ -15,6 +15,8 @@ options = sys.argv[1::]
 goals = ["clean"]
 mainjdk = False
 
+print("JAVA_HOME: " + os.environ["JAVA_HOME"])
+
 with open(os.getcwd() + "/.travis.yml", "r") as conf:
     travis = yaml.load(conf)
 
@@ -32,5 +34,5 @@ else:
 
 command = "mvn " + " ".join(options + goals)
 
-print "$" + command
+print("$" + command)
 sys.exit(subprocess.call(command, shell=True))
